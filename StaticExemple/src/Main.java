@@ -5,12 +5,17 @@ public class Main {
         System.out.println("Hello world!");
 
         int a;
+        System.out.println("SomeClass.someStaticField:" + SomeClass.someStaticField);
+
         int b;
         SomeClass someClass0 = new SomeClass(10);
         SomeClass someClass1 = new SomeClass(11);
         SomeClass someClass2 = new SomeClass(12);
         SomeClass someClass3 = new SomeClass(13);
         SomeClass someClass4 = new SomeClass(14);
+
+        System.out.println("SomeClass.someStaticField:" + SomeClass.someStaticField);
+
 
         a = SomeClass.SOME_FINAL_STATIC_FIELD;
         System.out.println("someStaticField: " + SomeClass.someStaticField);
@@ -25,14 +30,18 @@ public class Main {
         System.out.println("someField1: " + someClass1.someField);
 
         SomeClass resultNotStatic = someClass1.sum1(someClass1, someClass2);
-        System.out.println("resultStatic " + resultNotStatic.someField);
-        someClass1.sum(someClass2);
 
+
+        System.out.println("resultStatic " + resultNotStatic.someField);
+
+        someClass1.sum(someClass2);
 
         System.out.println("someField1: " + someClass1.someField);
 
         System.out.println("someField3: " + someClass3.someField);
+
         SomeClass resultStatic = SomeClass.sum(someClass3, someClass4);
+
         System.out.println("someField3: " + someClass3.someField);
         System.out.println("resultStatic " + resultStatic.someField);
 

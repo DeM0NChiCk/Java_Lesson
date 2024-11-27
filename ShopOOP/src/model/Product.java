@@ -1,9 +1,14 @@
 package model;
 
 public class Product {
+    public static int counterProducts = 0;
     private String name;
     private int position;
     private int count;
+
+    {
+        counterProducts++;
+    }
 
     public Product(String name, int position, int count) {
         this.name = name;

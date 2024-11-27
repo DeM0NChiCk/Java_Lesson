@@ -6,6 +6,8 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Привет магазин!");
+
+        System.out.println("Начало дня: " + Product.counterProducts);
         Storage storage = new Storage();
 
         Product[] productsOne = new Product[3];

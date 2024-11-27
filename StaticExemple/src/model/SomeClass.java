@@ -6,7 +6,7 @@ public class SomeClass {
     public final static int SOME_FINAL_STATIC_FIELD = 10;
     public int someField;
 
-    public SomeClass(int value ){
+    public SomeClass(int value){
         this.someField = value;
     }
 
