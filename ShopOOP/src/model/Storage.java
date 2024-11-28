@@ -22,10 +22,20 @@ public class Storage {
     //TODO:
     // addNewStorage()
     // Реализовать переезд на новый склад/расширение склада (метод должен возвращать массив нового размера)
+    public void addNewStorage(Product [] productsOne) {
+        // вычисляем длинну массива
+        int oldLength = productsOne.length;
+        // создаем новый массив прибавляя к старому 10
+        Product[] productsNew = new Product[oldLength + 10];
+        // переносим старые значения в новый массив
+        System.arraycopy(productsOne, 0, productsNew, 0, oldLength);
+        // заменяем старый массив новым
+        productsOne = productsNew;
 
+    }
     // TODO:
     //  deliveryProducts()
     //  реализовать пополнение товаров на складе.
-
-
 }
+
+
