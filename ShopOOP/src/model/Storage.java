@@ -1,7 +1,6 @@
 package model;
 
 public class Storage {
-    ;
 
     // TODO: реализовать во всех методах проверку того, что position не превышает размерности массива
     // TODO: написать try()...catch(), чтобы программа продолжала работу
@@ -27,9 +26,6 @@ public class Storage {
 
     private Product[] productsOne;
     // Поле теперь private
-    productsOne;// Инициализация массива
-}
-
 
     public void addNewStorage(Product[] productsOne) {
 
@@ -43,6 +39,15 @@ public class Storage {
         this.productsOne = productsNew;
 
     }
+
+    public Product[] getProductsOne() {
+        return productsOne;
+    }
+
+    public void setProductsOne(Product[] productsOne) {
+        this.productsOne = productsOne;
+    }
+
     // TODO:
     //  deliveryProducts()
     //  реализовать пополнение товаров на складе.
