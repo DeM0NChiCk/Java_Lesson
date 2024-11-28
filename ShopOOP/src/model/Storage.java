@@ -1,6 +1,7 @@
 package model;
 
 public class Storage {
+    ;
 
     // TODO: реализовать во всех методах проверку того, что position не превышает размерности массива
     // TODO: написать try()...catch(), чтобы программа продолжала работу
@@ -22,7 +23,13 @@ public class Storage {
     //TODO:
     // addNewStorage()
     // Реализовать переезд на новый склад/расширение склада (метод должен возвращать массив нового размера)
-    public void addNewStorage(Product [] productsOne) {
+
+
+    private Product[] productsOne; // Поле теперь private
+
+
+    public void addNewStorage(Product[] productsOne) {
+
         // вычисляем длинну массива
         int oldLength = productsOne.length;
         // создаем новый массив прибавляя к старому 10
@@ -30,7 +37,7 @@ public class Storage {
         // переносим старые значения в новый массив
         System.arraycopy(productsOne, 0, productsNew, 0, oldLength);
         // заменяем старый массив новым
-        productsOne = productsNew;
+        this.productsOne = productsNew;
 
     }
     // TODO:

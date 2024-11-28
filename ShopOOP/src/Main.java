@@ -24,6 +24,7 @@ public class Main {
         };
 
         //TODO: Product[] newStorаge = storage.addNewStorage();
+        //Product[] newStorаge = storage.addNewStorage();
 
         Product table = new Product("table", 0, 5);
         Product chair = new Product("chair", 1, 10);
