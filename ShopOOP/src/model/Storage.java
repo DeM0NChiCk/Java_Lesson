@@ -25,7 +25,10 @@ public class Storage {
     // Реализовать переезд на новый склад/расширение склада (метод должен возвращать массив нового размера)
 
 
-    private Product[] productsOne; // Поле теперь private
+    private Product[] productsOne;
+    // Поле теперь private
+    productsOne;// Инициализация массива
+}
 
 
     public void addNewStorage(Product[] productsOne) {
