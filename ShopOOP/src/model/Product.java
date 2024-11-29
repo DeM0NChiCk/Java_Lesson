@@ -32,9 +32,13 @@ public class Product {
         this.count++;
     }
 
-    public void removeOne(){
+    public void removeOne() {
         if (this.count > 0)
             this.count--;
     }
 
+    // Метод для пополнения количества товара на складе, где quantity Количество единиц товара для пополнения
+    public void deliveryProducts(int quantity) {
+        this.count += quantity;
+    }
 }
