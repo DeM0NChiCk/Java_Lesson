@@ -43,7 +43,7 @@ public class Main {
         storage.buyProducts(productsThree, table);
 
         // TODO: подумать над реализацией static методов
-
+        System.out.println("Конец дня: " + Product.counterProducts);
     }
 
 }
