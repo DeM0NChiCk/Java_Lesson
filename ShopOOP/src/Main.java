@@ -107,7 +107,7 @@ public class Main {
         System.out.println(child1.getAge());
 
         // TODO: подумать над реализацией static методов
-
+        System.out.println("Конец дня: " + Product.counterProducts);
     }
 
 }
