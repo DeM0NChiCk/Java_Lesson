@@ -1,14 +1,17 @@
 package model;
 
+import java.security.PublicKey;
+import java.security.SecureRandom;
+
 public class Product {
     public static int counterProducts = 0;
     private String name;
     private int position;
     private int count;
 
-    {
-        counterProducts++;
-    }
+//    {
+//        counterProducts++;
+//    }
 
     public Product(String name, int position, int count) {
         this.name = name;
@@ -28,6 +31,12 @@ public class Product {
         return count;
     }
 
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+
+
     public void addOne(){
         this.count++;
     }
@@ -37,4 +46,8 @@ public class Product {
             this.count--;
     }
 
+    @Override
+    public String toString() {
+        return"Product (" + "name = " + name + ", position = " + position + ", quantity = " + count + ')';
+    }
 }
