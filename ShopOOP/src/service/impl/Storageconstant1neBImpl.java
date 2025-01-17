@@ -7,9 +7,9 @@ import service.Storage;
 
 import static enums.EnumStatusCode.*;
 
-public class Storageconstant1neBImpl implements Storage {
+public class Storageconstant1neBImpl<T extends Product> implements Storage<T> {
     @Override
-    public void addProduct(Product[] products, Product product) {
+    public void addProduct(T[] products, T product) {
         try {
             int position = product.getPosition();
             if (position < 0 || position >= products.length) {
@@ -22,8 +22,8 @@ public class Storageconstant1neBImpl implements Storage {
     }
 
     @Override
-    public void getAllProducts(Product[] products) {
-        for (Product product : products) {
+    public void getAllProducts(T[] products) {
+        for (T product : products) {
             if (product != null) {
                 System.out.println("На складе: " + product.getCount() + " товаров с именем " + product.getName());
             }
@@ -31,7 +31,7 @@ public class Storageconstant1neBImpl implements Storage {
     }
 
     @Override
-    public EnumStatusCode buyProducts(Product[] products, Product product) {
+    public EnumStatusCode buyProducts(T[] products, T product) {
         try {
             int position = product.getPosition();
             if (position < 0 || position >= products.length || products[position] == null || products[position].getName().equals(product.getName())) {
@@ -53,15 +53,15 @@ public class Storageconstant1neBImpl implements Storage {
     }
 
     @Override
-    public Product[] storageExpansion(Product[] products, int extensionValue) {
-        Product[] newStorage = new Product[products.length * extensionValue];
+    public T[] storageExpansion(T[] products, int extensionValue) {
+        T[] newStorage = (T[]) new Product[products.length * extensionValue];
         System.arraycopy(products, 0, newStorage, 0, products.length);
         return newStorage;
     }
 
     @Override
-    public void deliveryProducts(Product[] storage, Product[] deliveryProducts) {
-        Product product = deliveryProducts[0];
+    public void deliveryProducts(T[] storage, T[] deliveryProducts) {
+        T product = deliveryProducts[0];
         int position = product.getPosition();
         if (position < 0) {
             System.err.println("Position не может быть отрицательным");
