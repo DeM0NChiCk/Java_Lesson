@@ -1,3 +1,4 @@
+import model.AnotherClass;
 import model.SomeClass;
 
 public class Main {
@@ -45,7 +46,12 @@ public class Main {
         System.out.println("someField3: " + someClass3.someField);
         System.out.println("resultStatic " + resultStatic.someField);
 
+        SomeClass.SecondClass secondClass = new SomeClass.SecondClass();
+        secondClass.age = 32;
+        System.out.println(secondClass.age);
 
+        AnotherClass anotherClass = new AnotherClass();
+        System.out.println(anotherClass.getAge());
 
     }
 }

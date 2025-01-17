@@ -2,16 +2,18 @@ package model;
 
 public class SomeClass {
 
-    public static int someStaticField = 3;
+    public static int someStaticField;
     public final static int SOME_FINAL_STATIC_FIELD = 10;
     public int someField;
 
-    public SomeClass(int value){
-        this.someField = value;
-    }
+    SecondClass secondClass2 = new SecondClass();
 
     static {
         someStaticField = 8;
+    }
+
+    public SomeClass(int value){
+        this.someField = value;
     }
 
     public void sum(SomeClass other){
@@ -26,4 +28,16 @@ public class SomeClass {
         return new SomeClass(a.someField + b.someField);
     }
 
+    private static class SecondClass {
+        public int age;
+
+        public static class ThreeClass {
+
+        }
+
+        private SecondClass() {
+
+        }
+    }
 }
+
