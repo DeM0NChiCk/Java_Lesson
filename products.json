@@ -1,0 +1,17 @@
+[
+  {
+    "name": "table",
+    "position": 0,
+    "count": 7
+  },
+  {
+    "name": "chair",
+    "position": 1,
+    "count": 12
+  },
+  {
+    "name": "bookshelf",
+    "position": 2,
+    "count": 6
+  }
+]

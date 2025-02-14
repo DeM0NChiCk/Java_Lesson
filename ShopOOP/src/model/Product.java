@@ -6,33 +6,30 @@ public class Product {
     private int position;
     private int count;
 
-    {
-        counterProducts++;
-    }
-
     public Product(String name, int position, int count) {
         this.name = name;
         this.position = position;
         this.count = count;
+        counterProducts++;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public int getPosition(){
+    public int getPosition() {
         return position;
     }
 
-    public int getCount(){
+    public int getCount() {
         return count;
     }
 
-    public void addOne(){
+    public void addOne() {
         this.count++;
     }
 
-    public void removeOne(){
+    public void removeOne() {
         if (this.count > 0)
             this.count--;
     }

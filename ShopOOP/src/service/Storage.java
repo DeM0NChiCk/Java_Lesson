@@ -7,14 +7,14 @@ import model.Product;
 // TODO: Добавить generic, то есть сделать интерфейс более универсальным
 public interface Storage<T> {
 
-    void addProduct(Product[] products, Product product);
+    void addProduct(T[] products, T product);
 
-    void getAllProducts(Product[] products);
+    void getAllProducts(T[] products);
 
-    EnumStatusCode buyProducts(Product[] products, Product product);
+    EnumStatusCode buyProducts(T[] products, T product);
 
-    Product[] storageExpansion(Product[] products, int extensionValue);
+    Product[] storageExpansion(T[] products, int extensionValue);
 
-    void deliveryProducts(Product[] storage, Product[] deliveryProducts);
+    void deliveryProducts(T[] storage, T[] deliveryProducts);
 
 }
