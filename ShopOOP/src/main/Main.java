@@ -2,13 +2,13 @@ package main;
 
 import enums.EnumStatusCode;
 import enums.ShopEnum;
-//import service.impl.StorageANewcomertoImpl;
 import service.impl.Storageconstant1neBImpl;
-import utils.Logger;
-import model.*;
 import service.Storage;
+import model.*;
 
+import utils.Logger;
 import utils.TimeLogger;
+import utils.SimpleJsonParser;
 
 import java.util.Arrays;
 
@@ -29,10 +29,15 @@ public class Main {
 
         //TODO: Product[] newStorаge = storage.addNewStorage();
 
+        //Реализация пополнения склада путем обработки парсером внешнего JSON файла:
+        String jsonFilePath = "products.json"; // Файл лежит в корне проекта
+        Product[] jsonProducts = SimpleJsonParser.parseJsonProducts(jsonFilePath);
+        storage.getAllProducts(jsonProducts);
+
+        //Продолжение изначального кода
         Product table = new Product("table", 0, 5);
         Product chair = new Product("chair", 1, 10);
         Product bookshelf = new Product("bookshelf", 2, 3);
-
         Product[] products = new Product[3];
 
         storage.addProduct(products, table);
