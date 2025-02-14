@@ -7,10 +7,10 @@ public class TestClass {
         this.category = category;
     }
 
-    @Override
-    public String toString() {
-        return getClass().getName() + "(" + "name:" + name + "," + "category:" + category + ")";
-    }
+//    @Override
+//    public String toString() {
+//        return getClass().getName() + "(" + "name:" + name + "," + "category:" + category + ")";
+//    }
 
     @Override
     public boolean equals(Object obj) {
